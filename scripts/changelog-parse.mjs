@@ -39,11 +39,15 @@ export function addEntry(content, type, text) {
   const { head, sections } = splitSections(content || EMPTY);
   let unrel = sections.find((s) => /## \[Unreleased\]/.test(s.header));
   if (!unrel) { unrel = { header: '## [Unreleased]', body: '' }; sections.unshift(unrel); }
-  const subRe = new RegExp(`### ${type}\\n`);
+  const subRe = new RegExp(`(### ${type}\n(?:- [^\n]*\n)*)`);
   if (subRe.test(unrel.body)) {
-    unrel.body = unrel.body.replace(subRe, `### ${type}\n- ${text}\n`);
+    // Append after the last existing item in the subsection (chronological order)
+    unrel.body = unrel.body.replace(subRe, `$1- ${text}\n`);
   } else {
-    unrel.body = unrel.body.replace(/\n*$/, '\n') + `### ${type}\n- ${text}\n`;
+    // New subsection: ensure exactly one blank line before the ### heading if prior content exists
+    const trimmed = unrel.body.replace(/\n*$/, '');
+    const separator = trimmed.length > 0 ? '\n\n' : '\n';
+    unrel.body = trimmed + separator + `### ${type}\n- ${text}\n`;
   }
   return rebuild(head, sections);
 }

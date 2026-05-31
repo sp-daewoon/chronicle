@@ -21,3 +21,15 @@ test('promote moves Unreleased content into a versioned section', () => {
   // fresh empty Unreleased remains on top
   assert.match(c, /## \[Unreleased\]\s*\n+## \[1\.0\.0\]/);
 });
+
+test('addEntry appends chronologically within an existing subsection', () => {
+  let c = addEntry(EMPTY, 'Added', 'first');
+  c = addEntry(c, 'Added', 'second');
+  assert.match(c, /- first\n- second/, 'entries must appear in chronological (oldest-first) order');
+});
+
+test('addEntry adds blank line before a new subsection when prior content exists', () => {
+  let c = addEntry(EMPTY, 'Added', 'feature');
+  c = addEntry(c, 'Fixed', 'bug');
+  assert.match(c, /- feature\n\n### Fixed\n- bug/, 'blank line must separate subsections');
+});
