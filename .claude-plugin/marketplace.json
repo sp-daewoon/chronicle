@@ -8,10 +8,16 @@
   "plugins": [
     {
       "name": "chronicle",
-      "source": ".",
+      "source": "./",
       "description": "ADR, CHANGELOG, release, devlog, index, and CLAUDE.md workflows in one plugin.",
       "license": "MIT",
-      "keywords": ["adr", "changelog", "release", "devlog", "documentation"]
+      "keywords": [
+        "adr",
+        "changelog",
+        "release",
+        "devlog",
+        "documentation"
+      ]
     }
   ]
 }
