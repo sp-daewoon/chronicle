@@ -20,10 +20,11 @@ export function buildAdrIndex({ cwd = process.cwd(), cfg }) {
     const text = readFileSync(join(dir, f), 'utf8');
     const { data } = parseFrontmatter(text);
     const titleMatch = /^#\s*(.+)$/m.exec(text);
+    const rawTitle = (titleMatch ? titleMatch[1] : m[2].replace(/[-_]/g, ' ')).trim();
     rows.push({
       number: parseInt(m[1], 10),
       file: f,
-      title: (titleMatch ? titleMatch[1] : m[2].replace(/[-_]/g, ' ')).trim(),
+      title: rawTitle.replace(/^\d+[.)]\s*/, ''),
       status: extractAdrStatus(text),
       date: data.date || '',
     });

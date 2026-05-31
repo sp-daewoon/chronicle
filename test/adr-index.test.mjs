@@ -17,8 +17,10 @@ test('buildAdrIndex lists ADRs sorted by number with parsed status', () => {
   assert.equal(rows.length, 2);
   assert.equal(rows[0].number, 1);
   assert.equal(rows[0].status, 'Proposed');
+  assert.equal(rows[0].title, 'Record architecture decisions');
   assert.equal(rows[1].number, 2);
   assert.equal(rows[1].status, 'Accepted');
   assert.equal(rows[1].date, '2026-05-02');
+  assert.equal(rows[1].title, 'Use Kafka');
   rmSync(dir, { recursive: true, force: true });
 });
