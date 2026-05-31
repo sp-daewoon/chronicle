@@ -176,7 +176,7 @@ git commit -m "chore: scaffold repo (package.json, MIT license, gitignore)"
   "plugins": [
     {
       "name": "chronicle",
-      "source": ".",
+      "source": "./",
       "description": "ADR, CHANGELOG, release, devlog, index, and CLAUDE.md workflows in one plugin.",
       "license": "MIT",
       "keywords": ["adr", "changelog", "release", "devlog", "documentation"]
