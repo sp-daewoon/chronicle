@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { buildIndexModel, renderIndexMarkdown } from '../scripts/index-render.mjs';
+import { buildIndexModel, renderIndexMarkdown, renderIndexHtml } from '../scripts/index-render.mjs';
 
 test('buildIndexModel collects adr count and changelog presence', () => {
   const dir = mkdtempSync(join(tmpdir(), 'idx-'));
@@ -32,4 +32,16 @@ test('renderIndexMarkdown produces navigation links', () => {
   assert.match(md, /\[Architecture Decision Records\]\(docs\/adr\)/);
   assert.match(md, /2 records/);
   assert.match(md, /\[Changelog\]\(CHANGELOG\.md\)/);
+});
+
+test('renderIndexHtml converts markdown links to HTML anchors', () => {
+  const model = {
+    adr: { count: 2, dir: 'docs/adr' },
+    changelog: { exists: true, path: 'CHANGELOG.md' },
+    releases: null,
+  };
+  const html = renderIndexHtml(model);
+  assert.ok(html.includes('<a href="docs/adr">Architecture Decision Records</a>'), 'ADR anchor missing');
+  assert.ok(html.includes('<a href="CHANGELOG.md">Changelog</a>'), 'Changelog anchor missing');
+  assert.ok(!html.includes('[Architecture Decision Records]'), 'raw markdown link still present');
 });

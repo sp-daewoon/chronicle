@@ -36,10 +36,13 @@ export function renderIndexMarkdown(model) {
   return out;
 }
 
-function renderIndexHtml(model) {
+export function renderIndexHtml(model) {
   const md = renderIndexMarkdown(model);
   const items = md.split('\n').filter((l) => l.startsWith('- '))
-    .map((l) => `<li>${l.slice(2)}</li>`).join('\n');
+    .map((l) => {
+      const inner = l.slice(2).replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+      return `<li>${inner}</li>`;
+    }).join('\n');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Project Index</title>
 <style>body{font-family:-apple-system,system-ui,sans-serif;max-width:820px;margin:2rem auto;padding:0 1rem}</style>
 </head><body><h1>Project Index</h1><ul>\n${items}\n</ul></body></html>\n`;
