@@ -146,13 +146,18 @@ Run the helper tests:
 npm test
 ```
 
-## Discoverability (skillsmp.com)
-
-[skillsmp.com](https://skillsmp.com) indexes public skills automatically by scraping GitHub — there's no submission form. A repo appears once it's public, uses the standard `SKILL.md` format (which chronicle does), and has **at least 2 stars**. If chronicle is useful to you, a ⭐ helps others find it.
-
 ## Contributing
 
-Issues and PRs welcome. Each skill is independent; helpers are pure and unit-tested. Please run `npm test` and `claude plugin validate .` before opening a PR.
+chronicle is open source and built to get better with the community. Fork it, use it on your own projects, and if something's missing, rough, or broken, please open an issue or send a pull request — I genuinely hope this grows into something more useful through your contributions.
+
+It's easy to hack on: each skill is independent, and the helpers are pure, unit-tested Node modules with zero dependencies, so changes are easy to reason about and review. Before opening a PR, please run:
+
+```bash
+npm test
+claude plugin validate .
+```
+
+Ideas, bug reports, new workflows, better wording — all welcome.
 
 ## License
 
