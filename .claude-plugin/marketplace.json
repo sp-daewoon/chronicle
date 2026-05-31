@@ -1,0 +1,17 @@
+{
+  "name": "chronicle",
+  "owner": {
+    "name": "sp-daewoon",
+    "url": "https://github.com/sp-daewoon"
+  },
+  "description": "chronicle — project documentation lifecycle plugin for Claude Code.",
+  "plugins": [
+    {
+      "name": "chronicle",
+      "source": ".",
+      "description": "ADR, CHANGELOG, release, devlog, index, and CLAUDE.md workflows in one plugin.",
+      "license": "MIT",
+      "keywords": ["adr", "changelog", "release", "devlog", "documentation"]
+    }
+  ]
+}

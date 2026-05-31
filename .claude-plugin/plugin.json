@@ -1,0 +1,16 @@
+{
+  "name": "chronicle",
+  "displayName": "chronicle",
+  "version": "0.1.0",
+  "description": "Automate your project's documentation lifecycle — ADR, CHANGELOG, releases, devlog, index, and CLAUDE.md — as 6 skills with zero-dependency helpers.",
+  "author": {
+    "name": "sp-daewoon",
+    "url": "https://github.com/sp-daewoon"
+  },
+  "homepage": "https://github.com/sp-daewoon/chronicle",
+  "repository": "https://github.com/sp-daewoon/chronicle",
+  "license": "MIT",
+  "keywords": ["adr", "changelog", "release", "devlog", "documentation", "docops", "skills"],
+  "skills": "./skills/",
+  "commands": ["./commands/"]
+}
