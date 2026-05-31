@@ -70,7 +70,11 @@ function main(argv) {
   }
   if (!date) { process.stderr.write('--date YYYY-MM-DD required\n'); process.exit(1); }
   const cfg = loadConfig({ cwd: process.cwd(), path: config });
-  const data = JSON.parse(readIfExists('/dev/stdin') || '{}');
+  let data = {};
+  try {
+    const stdin = readIfExists('/dev/stdin');
+    if (stdin && stdin.trim()) data = JSON.parse(stdin);
+  } catch { /* no stdin or invalid JSON — fall back to empty */ }
   const dir = join(process.cwd(), cfg.devlog.dir);
   let existing = [];
   try { existing = readdirSync(dir).filter((f) => /\.html$/.test(f) && f !== 'index.html'); } catch {}
