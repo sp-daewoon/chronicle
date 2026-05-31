@@ -1,6 +1,6 @@
 ---
 name: index
-description: Use when generating or refreshing a project's single navigation hub — an INDEX that links ADRs, the changelog, and releases. Adapts to any project via chronicle.config.json.
+description: Give your project one beautiful front door instead of scattered docs. Use when generating or refreshing a single navigation hub that links your ADRs, changelog and releases. Outputs Markdown or a self-contained HTML page based on your config, and adapts to any repo via config or auto-detection.
 ---
 
 # Index Workflow

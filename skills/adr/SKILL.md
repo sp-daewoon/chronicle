@@ -1,6 +1,6 @@
 ---
 name: adr
-description: Use when recording, updating, or indexing an Architecture Decision Record (ADR) — creating a new decision, transitioning status (Proposed/Accepted/Deprecated/Superseded), or regenerating the ADR index. Adapts to any project via chronicle.config.json with auto-detection.
+description: Never lose the reasoning behind an architecture decision again. Use when recording or revisiting an Architecture Decision Record — creating a numbered ADR, transitioning its status (Proposed, Accepted, Deprecated, Superseded), or regenerating the index. Auto-numbers, fills the template, and rebuilds the index for you, adapting to any repo via config or auto-detection.
 ---
 
 # ADR Workflow

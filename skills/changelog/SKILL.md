@@ -1,6 +1,6 @@
 ---
 name: changelog
-description: Use when adding a changelog entry or promoting unreleased changes into a version — manages a Keep a Changelog formatted CHANGELOG.md. Adapts to any project via chronicle.config.json with auto-detection.
+description: Keep a changelog humans actually read, and never hand-edit version sections again. Use when adding a change entry or promoting unreleased work into a released version. Follows the Keep a Changelog standard, appends entries chronologically, stays merge-conflict-resistant, and runs with zero dependencies on any repo.
 ---
 
 # Changelog Workflow

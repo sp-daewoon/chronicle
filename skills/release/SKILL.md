@@ -1,6 +1,6 @@
 ---
 name: release
-description: Use when cutting a release — promotes the changelog, synthesizes rich release notes from CHANGELOG/ADRs/commits, tags the release, and optionally publishes a GitHub release. Adapts to any project via chronicle.config.json.
+description: Ship releases with rich, auto-written notes instead of hand-typed bullet points. Use when cutting a release — promote the changelog, synthesize notes from your CHANGELOG, ADRs and commits, tag the release, and optionally publish via the gh CLI. Degrades gracefully to a notes file when gh is absent, and adapts to any repo via config.
 ---
 
 # Release Workflow

@@ -1,6 +1,6 @@
 ---
 name: claude-md
-description: Use when maintaining (not initially creating) a CLAUDE.md — keeping it in sync with architecture, conventions, and commands as the project evolves, and pruning it so it stays focused. Complements the built-in /init.
+description: Keep the CLAUDE.md your agents rely on accurate and lean instead of stale. Use when maintaining (not first creating) a CLAUDE.md — syncing it with architecture, conventions and commands as the project evolves, and pruning bloat so it stays scannable. Complements the built-in /init by owning the ongoing upkeep.
 ---
 
 # CLAUDE.md Maintenance Workflow

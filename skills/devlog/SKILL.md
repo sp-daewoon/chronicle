@@ -1,6 +1,6 @@
 ---
 name: devlog
-description: Use when writing a development session log — summarizes the current session into a dated, self-contained HTML page and updates the devlog index. Adapts to any project via chronicle.config.json.
+description: Turn every working session into a clean, dated development journal, automatically. Use when writing a development session log — it captures the session into a self-contained, dependency-free HTML page and updates a running index. Creates a new sequenced file per call so it never overwrites past logs, adapting to any repo via config.
 ---
 
 # Devlog Workflow
