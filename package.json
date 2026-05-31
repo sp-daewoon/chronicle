@@ -1,0 +1,15 @@
+{
+  "name": "chronicle",
+  "version": "0.1.0",
+  "description": "A Claude Code plugin that automates your project documentation lifecycle: ADR, CHANGELOG, releases, devlog, index, and CLAUDE.md.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
