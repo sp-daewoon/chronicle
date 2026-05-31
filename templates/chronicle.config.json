@@ -1,0 +1,26 @@
+{
+  "adr": {
+    "dir": "docs/adr",
+    "format": "nygard",
+    "numberWidth": 4,
+    "indexFile": "docs/adr/README.md"
+  },
+  "changelog": {
+    "path": "CHANGELOG.md",
+    "format": "keepachangelog"
+  },
+  "devlog": {
+    "dir": "docs/devlog",
+    "format": "html",
+    "sections": ["Summary", "Changes", "Decisions", "Next"]
+  },
+  "index": {
+    "output": "docs/INDEX.html",
+    "sources": ["adr", "changelog", "releases"]
+  },
+  "release": {
+    "provider": "github",
+    "tagPrefix": "v",
+    "readmeTable": true
+  }
+}
