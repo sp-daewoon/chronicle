@@ -1,6 +1,7 @@
 ---
 name: changelog
 description: Keep a changelog humans actually read, and never hand-edit version sections again. Use when adding a change entry or promoting unreleased work into a released version. Follows the Keep a Changelog standard, appends entries chronologically, stays merge-conflict-resistant, and runs with zero dependencies on any repo.
+license: MIT
 ---
 
 # Changelog Workflow

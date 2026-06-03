@@ -2,7 +2,7 @@
 
 [English](README.md) · **한국어**
 
-> 프로젝트의 **문서화 lifecycle**(결정·변경·배포·일지·길잡이)을 6개의 집중된 skill로 자동화하는 Claude Code 플러그인.
+> 프로젝트의 **문서화 lifecycle**(ADR 자동화·changelog 자동화·release notes·devlog·프로젝트 index)을 6개의 집중된 skill로 자동화하는 `SKILL.md` 기반 **Agent Skills** / Claude Code 플러그인.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-plugin-7c3aed.svg)](https://code.claude.com/docs/en/plugins)

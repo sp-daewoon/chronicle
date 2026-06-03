@@ -1,6 +1,7 @@
 ---
 name: index
 description: Give your project one beautiful front door instead of scattered docs. Use when generating or refreshing a single navigation hub that links your ADRs, changelog and releases. Outputs Markdown or a self-contained HTML page based on your config, and adapts to any repo via config or auto-detection.
+license: MIT
 ---
 
 # Index Workflow

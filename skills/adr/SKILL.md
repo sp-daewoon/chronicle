@@ -1,6 +1,7 @@
 ---
 name: adr
 description: Never lose the reasoning behind an architecture decision again. Use when recording or revisiting an Architecture Decision Record — creating a numbered ADR, transitioning its status (Proposed, Accepted, Deprecated, Superseded), or regenerating the index. Auto-numbers, fills the template, and rebuilds the index for you, adapting to any repo via config or auto-detection.
+license: MIT
 ---
 
 # ADR Workflow

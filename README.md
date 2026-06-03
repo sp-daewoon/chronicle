@@ -2,7 +2,7 @@
 
 **English** · [한국어](README.ko.md)
 
-> A Claude Code plugin that automates your project's **documentation lifecycle** — decisions, changes, releases, logs, and navigation — as six focused skills.
+> A `SKILL.md`-based **Agent Skills** / Claude Code plugin that automates your project's **documentation lifecycle** — ADR automation, changelog automation, release notes, devlogs, and a project index — as six focused skills.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-plugin-7c3aed.svg)](https://code.claude.com/docs/en/plugins)

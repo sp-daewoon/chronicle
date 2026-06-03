@@ -1,6 +1,7 @@
 ---
 name: devlog
 description: Turn every working session into a clean, dated development journal, automatically. Use when writing a development session log — it captures the session into a self-contained, dependency-free HTML page and updates a running index. Creates a new sequenced file per call so it never overwrites past logs, adapting to any repo via config.
+license: MIT
 ---
 
 # Devlog Workflow
